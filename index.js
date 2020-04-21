@@ -10,6 +10,7 @@ const fetchData = async (searTerm) => {
 }
 
 const input = document.querySelector('input');
-input.addEventListener('input', (event) => {
+const onInput = event => {
   fetchData(event.target.value);
-})
+}
+input.addEventListener('input', )
