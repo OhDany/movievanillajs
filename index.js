@@ -1,12 +1,15 @@
-const fetchData = async () => {
+const fetchData = async (searTerm) => {
   const response = await axios.get('http://www.omdbapi.com/', {
     params: {
       apikey: '8defcb8a',
-      s: 'avengers'
+      s: searTerm
     }
   });
 
   console.log(response.data);
 }
 
-fetchData();
+const input = document.querySelector('input');
+input.addEventListener('input', (event) => {
+  fetchData(event.target.value);
+})
