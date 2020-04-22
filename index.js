@@ -46,7 +46,12 @@ const onInput = async event => {
     option.innerHTML = `
     <img src="${imgSrc}" />
     ${movie.Title}
-    `
+    `;
+    option.addEventListener('click', () => {
+      dropdown.classList.remove('is-active');
+      input.value = movie.Title;
+    });
+
     resultsWrapper.appendChild(option);
   }
 };
