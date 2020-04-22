@@ -6,6 +6,10 @@ const fetchData = async (searTerm) => {
     }
   });
 
+  if (response.data.Error) {
+    return [];
+  }
+
   return response.data.Search;
 }
 
